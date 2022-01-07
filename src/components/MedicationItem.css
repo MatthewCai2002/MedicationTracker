@@ -1,0 +1,9 @@
+.medication-item {
+    display: grid;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+.medication-itme__name {
+    padding-left: 1rem;
+}
