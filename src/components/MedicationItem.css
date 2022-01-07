@@ -1,9 +1,84 @@
+
+/* 
+    Components 
+*/
 .medication-item {
-    display: grid;
+    /* Layout */
+    display: flex;
+    border-radius: 10px;
     justify-content: space-between;
-    background-color: aqua;
+    align-items: center;
+
+    /* Properties*/
+    background-color: #1B1B1B;
+    box-shadow: 2px 7px #0E0E10;
+    width: 80%;
+
+    /* Fonts */
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+
+    /* Positioning */
+    margin: 1rem;
 }
 
-.medication-itme__name {
-    padding-left: 1rem;
+.medication-info {
+    /* Layout */
+    display: flex;
+}
+
+.medication-date,
+.medication-time,
+.medication-name {
+    /* Fonts */
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.medication-name {
+    /* Positioning */
+    margin: 0 2rem;
+}
+
+
+.medication-date {
+    /* Positioning */
+    margin-left: 0.25rem;
+}
+
+.medication-time{
+    /* Positioning */
+    margin-right: 1.5rem;
+}
+
+/* 
+    Buttons
+*/
+
+.next-dose {
+    /* Layout */
+    margin: 1rem 1rem 1rem 0;
+    padding: 0 1rem;
+
+    /* Background */
+    background-color: blueviolet;
+
+    /* Border */
+    border: none;
+    border-radius: 10px;
+
+    /* Fonts */
+    font-family: inherit;
+    font-weight: 550;
+    font-size: large;
+
+    /* Animation */
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.next-dose:hover {
+    transform: scale(1.04);
 }

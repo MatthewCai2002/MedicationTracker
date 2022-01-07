@@ -1,11 +1,22 @@
 import "./MedicationItem.css";
 
-function MedicationItem() {
+function MedicationItem(props) {
+    const medicationName = props.name;
+    const medicationTime = props.date.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+    const medicationDate = props.date.toLocaleString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric"})
+
     return (
         <div className="medication-item">
-            <h2 className="medication-item__name"> Acutane </h2>
-            <span className="medication-item__last-taken"> Last dose taken on: Wednesday at 4:00pm</span>
-            <button className="medication-itme__next-dose"> Take Next Dose </button>
+            <div className="medication-info">
+                <span className="medication-name"> {medicationName} </span>
+                <div>
+                    <span className="last-taken"> Last dose taken on: </span>
+                    <span className="medication-date"> {medicationDate} </span>
+                    <span className="time-at"> at </span>
+                    <span className="medication-time"> {medicationTime} </span>
+                </div>
+            </div> 
+            <button className="next-dose"> Take Next Dose </button>
         </div>
     );
 }
