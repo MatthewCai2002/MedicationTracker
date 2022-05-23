@@ -1,4 +1,5 @@
 import "./MedicationItem.css";
+import Card from "./Card"
 
 function MedicationItem(props) {
     const medicationName = props.name;
@@ -8,15 +9,15 @@ function MedicationItem(props) {
     return (
         <div className="medication-item">
             <div className="medication-info">
-                <span className="medication-name"> {medicationName} </span>
-                <div>
+                <h1 className="medication-name"> {medicationName} </h1>
+                <div className="date-container">
                     <span className="last-taken"> Last dose taken on: </span>
-                    <span className="medication-date"> {medicationDate} </span>
+                    <h2 className="medication-date"> {medicationDate} </h2>
                     <span className="time-at"> at </span>
-                    <span className="medication-time"> {medicationTime} </span>
+                    <h2 className="medication-time"> {medicationTime} </h2>
                 </div>
             </div> 
-            <button className="next-dose"> Take Next Dose </button>
+            <button className="dose-btn"> Take Next Dose </button>
         </div>
     );
 }
