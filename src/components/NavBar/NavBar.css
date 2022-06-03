@@ -1,0 +1,67 @@
+:root {
+    --ff-main-font: "Roboto";
+    --ff-nav-font-size: 1.125rem;
+    --ff-nav-font-weight: 500;
+    font-family: var(--ff-main-font);
+
+}
+
+/* containers */
+
+.header-container {
+    /* Layout */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ul-container {
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    gap: var(--gap, 3rem);
+
+    /* Other */
+    list-style: none;
+}
+
+.account-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 1rem;
+}
+
+/* components */
+.account-container > *,
+.ul-container a {
+    /* Fonts */
+    font-style: normal;
+    font-weight: var(--ff-nav-font-weight);
+    font-size: var(--ff-nav-font-size);
+    color: #fff;
+}
+
+.ul-container > a {
+    text-decoration: none;
+}
+
+.logo {
+    /* Layout */
+    margin: 1rem;
+
+    /* Fonts */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+
+    /* Background */
+    background: linear-gradient(90deg, #F04444 8%, #604FFD 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

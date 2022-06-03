@@ -2,11 +2,12 @@
     /* layout */
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
     align-items: center;
 
-    width: 100%;
-    border-radius: 10px;
-
     /* colour */
-    background-color: #0E0E10;
+    background-color: #1B1B1B;
+    max-width: 80%;
+    color: #ffffff;
+    
 }

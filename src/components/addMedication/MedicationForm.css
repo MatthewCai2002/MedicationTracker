@@ -1,0 +1,16 @@
+/* 
+    Containers
+*/
+
+.add-med-container {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+
+    /* Colour */
+    background-color: #d8d8c0;
+    color: #000000;
+
+    /* Fonts */
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
