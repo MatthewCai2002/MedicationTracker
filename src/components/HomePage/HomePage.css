@@ -1,0 +1,27 @@
+.home-page-content {
+    margin-inline: 3rem;
+    margin-block: 2rem;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+span {
+    font-size: 1.125rem;
+}
+
+.feature1-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature2-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature2-container img {
+    margin-top: 4rem
+}

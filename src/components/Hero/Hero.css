@@ -1,0 +1,53 @@
+.hero-container {
+  background: linear-gradient(
+    104.86deg,
+    #9b98ef 4.32%,
+    #1e6cd1 62.7%,
+    #6fc4ed 101.79%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  /* Spacing */
+  margin-inline: max(3rem, 10vw);
+}
+
+.hero-text h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.hero-text span {
+  font-size: 1.125rem;
+}
+
+img {
+  margin-block: 3vh;
+}
+
+.get-started-hero {
+  /* spacing */
+  margin-block: 3em;
+
+  padding-block: 0.5em;
+
+  /* fonts */
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: white;
+
+  /* background */
+  background-color: transparent;
+
+  /* border */
+  border: 2px solid white;
+  border-radius: 100vmax;
+}

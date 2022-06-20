@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "../Card/Card";
+import Card from "../Utility/Card/Card";
 import "./MedicationItem.css";
 
 function MedicationItem(props) {

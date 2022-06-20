@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar(props) {
   const [mobileNav, setMobileNav] = useState(false);
   const toggleMobileNav = () => {
     setMobileNav(!mobileNav);
@@ -13,15 +13,14 @@ function NavBar() {
       <button
         onClick={toggleMobileNav}
         className={mobileNav ? "mobile-nav-active" : "mobile-nav-toggle"}
-        aria-controls="navigation-container account-container"
-        aria-expanded="false"
       >
-        <span className="sr-only">Menu</span>
       </button>
-      <div className={mobileNav ? "primary-navigation-active" : "primary-navigation"}>
-        <ul
-          id="navigation-container"
-          className="navigation-container">
+      <nav
+        className={
+          mobileNav ? "primary-navigation-active" : "primary-navigation"
+        }
+      >
+        <ul id="navigation-container" className="navigation-container">
           <li>
             <a>Home</a>
           </li>
@@ -35,13 +34,11 @@ function NavBar() {
             <a>Contact</a>
           </li>
         </ul>
-        <div
-          id="account-container"
-          className="account-container">
+        <div id="account-container" className="account-container">
           <a>Log In</a>
           <a>Sign Up</a>
         </div>
-      </div>
+      </nav>
     </div>
   );
 }

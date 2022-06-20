@@ -1,4 +1,4 @@
-import Card from "../Card/Card";
+import Card from "../Utility/Card/Card";
 import "./MedicationForm.css";
 
 function NewMedication() {
