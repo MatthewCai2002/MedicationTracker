@@ -28,9 +28,12 @@
   font-size: 1.125rem;
 }
 
-img {
+.hero-content img{
+  max-width: 32rem;
   margin-block: 3vh;
+
 }
+
 
 .get-started-hero {
   /* spacing */
@@ -44,10 +47,20 @@ img {
   font-size: 1.125rem;
   color: white;
 
+  /* spacing */
+  margin-inline: auto;
+  width: min(15rem, 60vw);
+  transition: transform ease-out 0.1s;
+
   /* background */
   background-color: transparent;
 
   /* border */
   border: 2px solid white;
   border-radius: 100vmax;
+}
+
+.get-started-hero:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }

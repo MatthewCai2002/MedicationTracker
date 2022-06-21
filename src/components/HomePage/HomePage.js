@@ -1,5 +1,7 @@
 import Hero from "../Hero/Hero";
-import GetStartedBtn from "../Utility/GetStartedBtn/GetStartedBtn";
+import githubIcon from "./github-brands.svg";
+import emailIcon from "./envelope-solid.svg";
+import instaIcon from "./instagram-brands.svg";
 import feature1Image from "./feature-1-image.svg";
 import feature2Image from "./feature-2-image.svg";
 import "./HomePage.css";
@@ -13,8 +15,8 @@ function HomePage() {
           <img src={feature1Image} alt="phone notification image" />
           <h2>Manage your reminders anywhere</h2>
           <span>
-            Whether you're at home or on mobile you can access and manage your alerts on any device,
-            from anywhere, all from your browser
+            Whether you're at home or on mobile you can access and manage your
+            alerts on any device, from anywhere, all from your browser
           </span>
         </div>
         <div className="feature2-container">
@@ -26,19 +28,20 @@ function HomePage() {
           </span>
           <button className="get-started-feature"> Get Started </button>
         </div>
-    
+
         <div className="contact-container">
-          <h2>
-            Eu aliqua id eu et dolor culpa cupidatat eiusmod officia deserunt
-            enim.
-          </h2>
+          <h2>About Me</h2>
           <span>
-            Laborum id anim ad excepteur cillum. Commodo labore ipsum anim
-            proident cupidatat cupidatat dolore. Est non labore et et ullamco
-            amet qui aute cupidatat ullamco. Officia Lorem culpa cillum
-            cupidatat. Magna mollit velit commodo non pariatur sunt non do irure
-            et laborum.
+            Hi! I’m Matthew a third year Computer Science student who loves to
+            learn about and create new things. This is my first web app so I
+            hope you had a great experience and that it’s helped you out a
+            little bit!
           </span>
+          <div className="icon-container">
+            <img src={githubIcon} alt="github icon"/>
+            <img src={instaIcon} alt="instagram icon"/>
+            <img src={emailIcon} alt="email icon"/>
+          </div>
           <img />
         </div>
       </div>

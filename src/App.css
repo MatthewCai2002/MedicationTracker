@@ -1,15 +1,24 @@
 :root {
-    --ff-main-font: "Roboto";
-    --ff-font-size: 1.125rem;
-    --ff-font-weight: 500;
-    font-family: var(--ff-main-font);
-    font-style: normal;
-    font-weight: var(--ff-font-weight);
-    font-size: var(--ff-font-size);
-    letter-spacing: 1.5px;
-    color: #fff;
+  --ff-main-font: "Roboto";
+  --ff-font-size: 1.125rem;
+  --ff-font-weight: 500;
+  font-family: var(--ff-main-font);
+  font-style: normal;
+  font-weight: var(--ff-font-weight);
+  font-size: var(--ff-font-size);
+  letter-spacing: 1.5px;
+  color: #fff;
 }
 
+button {
+  
+
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
 
 .App {
 }
