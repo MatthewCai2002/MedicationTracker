@@ -9,14 +9,16 @@ function Hero(props) {
       <NavBar />
       <div className="hero-content">
         <img src={heroImage} alt="Hero Image" />
-        <div className="hero-text">
-          <h2>Never Forget Again.</h2>
-          <span>
-            Use ReMind to track your medication compliance and set repeatable
-            notifications so you never miss a dosage again.
-          </span>
+        <div className="all-hero-text">
+          <div className="hero-text">
+            <h2>Never Forget Again.</h2>
+            <span>
+              Use ReMind to track your medication compliance and set repeatable
+              notifications so you never miss a dosage again.
+            </span>
+          </div>
+          <button className="get-started-hero"> Get Started </button>
         </div>
-        <button className="get-started-hero"> Get Started </button>
       </div>
     </div>
   );

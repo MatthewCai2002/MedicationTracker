@@ -29,17 +29,21 @@
 }
 
 .hero-content img{
-  max-width: 32rem;
+  max-width: 28rem;
   margin-block: 3vh;
 
 }
 
-
 .get-started-hero {
-  /* spacing */
-  margin-block: 3em;
+  /* layout */
+  position: relative;
+  z-index: 1;
 
+  /* spacing */
+  margin-inline: auto;
+  margin-block: 3em;
   padding-block: 0.5em;
+  width: min(15rem, 60vw);
 
   /* fonts */
   font-family: "Roboto";
@@ -47,20 +51,59 @@
   font-size: 1.125rem;
   color: white;
 
-  /* spacing */
-  margin-inline: auto;
-  width: min(15rem, 60vw);
-  transition: transform ease-out 0.1s;
+  transition: all ease-out 0.1s;
 
   /* background */
   background-color: transparent;
 
   /* border */
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 100vmax;
+
 }
 
-.get-started-hero:hover {
-  cursor: pointer;
-  transform: scale(1.05);
+@media (min-width: 40em) {
+  .hero-content {
+    flex-direction: row;
+    margin-block: 4rem;
+  }
+
+  .hero-content img {
+    order: 2;
+  }
+
+  .all-hero-text {
+    margin-inline-end: max(4em, 15vw);
+  }
+
+  .get-started-hero {
+    transition: border ease-in 200ms;
+  }
+
+  .get-started-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.075);
+    border-radius: 100vmax;
+
+    transform: scale(0);
+    transition: transform ease-in 150ms;
+  }
+
+  .get-started-hero:hover::after {
+    transform: scale(1);
+  }
+
+  .get-started-hero:hover {
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+
 }

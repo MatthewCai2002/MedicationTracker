@@ -10,15 +10,11 @@
   color: #fff;
 }
 
-button {
-  
-
+body::-webkit-scrollbar {
+  display: none;
 }
 
-button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-.App {
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

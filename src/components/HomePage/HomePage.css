@@ -67,3 +67,18 @@ span {
 .icon-container img {
     width: 3rem;
 }
+
+@media (min-width: 40em) {
+    .home-page-content > * {
+        flex-direction: row;
+    }
+
+    .home-page-content {
+        margin-block: 20vh;
+        margin-inline: max(4rem, 20vw);
+    }
+
+    .feature-1-text {
+        margin-inline-start: 4em;
+    }
+}
