@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import "./NavBar.css";
 
 function NavBar(props) {
@@ -8,8 +9,8 @@ function NavBar(props) {
   };
 
   return (
-    <div className="header-container">
-      <span className="logo"> ReMind</span>
+    <div className="header-container" id="about">
+      <a className="logo"> ReMind</a>
       <button
         onClick={toggleMobileNav}
         className={mobileNav ? "mobile-nav-active" : "mobile-nav-toggle"}
@@ -22,16 +23,13 @@ function NavBar(props) {
       >
         <ul id="navigation-container" className="navigation-container">
           <li>
-            <a>Home</a>
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link activeClass="active" to="feature" spy={true} smooth={true} offset={50} duration={500}>Features</Link>
           </li>
           <li>
-            <a>Features</a>
-          </li>
-          <li>
-            <a>Contact</a>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
           </li>
         </ul>
         <div id="account-container" className="account-container">

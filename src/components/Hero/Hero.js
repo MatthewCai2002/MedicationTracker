@@ -7,7 +7,7 @@ function Hero(props) {
   return (
     <div className="hero-container">
       <NavBar />
-      <div className="hero-content">
+      <div className="hero-content" id="about">
         <img src={heroImage} alt="Hero Image" />
         <div className="all-hero-text">
           <div className="hero-text">

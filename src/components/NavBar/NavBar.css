@@ -30,9 +30,19 @@
     color: #F04444;
 }
 
+.logo::after {
+    content: none;
+}
+
 .mobile-nav-toggle,
 .mobile-nav-active {
     display: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color:  #fff;
 }
 
 a:hover {
