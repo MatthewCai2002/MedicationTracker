@@ -1,0 +1,37 @@
+.modal-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.modal-container {
+    position: relative;
+    width: clamp(10rem, 50vw, 25rem);
+    height: min(70vh, 25rem);
+    background-color: #fff;
+    border-radius: 2%;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 1.5rem;
+    padding: 0;
+    border: none;
+
+
+    background-image: url("/src/assets/icons/xmark-solid-black.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    aspect-ratio: 1;
+
+}

@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import Hero from "../Hero/Hero";
 import profilePic from "./fetchimage.webp";
 import githubIcon from "./github-brands.svg";
@@ -6,14 +7,15 @@ import instaIcon from "./instagram-brands.svg";
 import feature1Image from "./feature-1-image.svg";
 import feature2Image from "./feature-2-image.svg";
 import "./HomePage.css";
+import Modal from "../Utility/Modal/Modal";
 
 function HomePage() {
   return (
     <div className="home-page-container">
-      <Hero />
-      <div className="home-page-content" >
+        <Hero />
+      <div className="home-page-content">
         <div className="feature1-container" id="feature">
-          <img src={feature1Image} alt="phone notification image"/>
+          <img src={feature1Image} alt="phone notification image" />
           <div className="feature-1-text">
             <h2>Manage your reminders anywhere</h2>
             <span>
@@ -49,7 +51,7 @@ function HomePage() {
               <img src={emailIcon} alt="email icon" />
             </div>
           </div>
-          <img src={profilePic} className="monke" alt="monkey"/>
+          <img src={profilePic} className="monke" alt="monkey" />
         </div>
       </div>
     </div>

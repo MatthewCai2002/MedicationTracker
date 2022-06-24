@@ -16,6 +16,7 @@ function App() {
       <MedicationItem name={medications[0].name} date={medications[0].date} />
       <MedicationItem name={medications[1].name} date={medications[1].date} /> */}
       <HomePage />
+      
     </div>
   );
 }
