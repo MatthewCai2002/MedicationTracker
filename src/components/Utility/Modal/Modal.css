@@ -8,30 +8,56 @@
     width: 100vw;
     height: 100vh;
 
+    color: #000;
+    
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1000;
 }
 
 .modal-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: clamp(10rem, 50vw, 25rem);
-    height: min(70vh, 25rem);
+
+    width: clamp(15rem, 60vw, 85vh);
+    height: 80vh;
+
     background-color: #fff;
     border-radius: 2%;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.close-modal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .close-modal-btn {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 1.5rem;
+    width: clamp(1.5rem, 4vw, 2rem);
+
+    margin-top: min(5%, 1rem);
+    margin-right: min(5%, 1rem);
     padding: 0;
     border: none;
-
 
     background-image: url("/src/assets/icons/xmark-solid-black.svg");
     background-repeat: no-repeat;
     background-color: transparent;
     aspect-ratio: 1;
-
+    transition: transform cubic-bezier(.53,1.75,.53,1.71) 150ms;
 }
+
+.close-modal-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+

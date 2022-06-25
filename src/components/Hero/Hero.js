@@ -1,5 +1,4 @@
 import NavBar from "../NavBar/NavBar";
-import GetStartedBtn from "../Utility/GetStartedBtn/GetStartedBtn";
 import heroImage from "./Hero-Image.svg";
 import "./Hero.css";
 

@@ -1,0 +1,93 @@
+.log-in-content {
+    display: flex;
+    margin-inline: 10%;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.log-in-content h2 {
+    margin-top: 0;
+    margin-bottom: 0.67em;
+}
+
+.log-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    text-align: left;
+}
+
+.log-in-form > * {
+    width: min(100%,20rem);
+}
+
+.log-in-content a {
+    display: block;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--link-colour);
+}
+
+.social-log-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-log-in > * {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.social-log-in > * img {
+    margin-inline: 1rem;
+}
+
+.social-log-in > * span {
+    margin-inline: auto;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 2rem;
+}
+
+.modal-footer a {
+    width: fit-content;
+}
+
+input {
+    margin-top: 1em;
+    padding-block: 0.25em;
+    width: 100%;
+
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.log-in-content a::after {
+    background-color: var(--link-colour);
+    height: 2px;
+}
+
+@media (min-width: 40em) {
+    .log-in-content h2 {
+        font-size: 2em;
+    }
+    
+    .social-log-in > * {
+        width: min(100%, 20rem);
+    }
+
+    .password-entry {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,4 +1,6 @@
 :root {
+  --link-colour: #3399F6;
+  --main-colour: #0468D7;
   --ff-main-font: "Roboto";
   --ff-font-size: 1.125rem;
   --ff-font-weight: 500;
