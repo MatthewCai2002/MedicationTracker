@@ -1,7 +1,9 @@
-.modal-background {
+.modal-active {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
 
     position: fixed;
     inset: 0;
@@ -10,8 +12,12 @@
 
     color: #000;
     
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1000;
+    transition: background-color ease-in 125ms;
+}
+
+.modal-active > div {
+    transform: translate(0);
 }
 
 .modal-container {
@@ -22,12 +28,17 @@
     width: clamp(15rem, 60vw, 85vh);
     height: 80vh;
 
+    transform: translate(0, -100vh);
+    transition: transform cubic-bezier(.4,.77,.6,1.30) 125ms;
+
     background-color: #fff;
     border-radius: 2%;
-    overflow-y: auto;
+    
 
+    overflow-y: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+
 }
 
 .modal-container::-webkit-scrollbar {

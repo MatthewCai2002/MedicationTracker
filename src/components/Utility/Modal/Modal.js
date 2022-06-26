@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import "./Modal.css";
 
 function Modal(props) {
-    const cname = "modal-container " + props.className;
+    // const cname = "modal-background " + props.className;
   const modalRef = useRef();
   // useEffect(() => {
   //   const closeModal = (e) => {
@@ -17,8 +17,8 @@ function Modal(props) {
   // }, []);
 
   return createPortal(
-    <div className="modal-background">
-      <div ref={modalRef} className={cname}>
+    <div className={props.className}>
+      <div ref={modalRef} className="modal-container">
         <div className="close-modal">
           <button
             onClick={() => props.toggleModal(true)}
@@ -28,7 +28,7 @@ function Modal(props) {
         {props.children}
       </div>
     </div>,
-    document.getElementById("logInPortal")
+    document.getElementById("modalPortal")
   );
 }
 

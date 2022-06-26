@@ -1,18 +1,29 @@
-import { createContext, useState } from "react";
 import Hero from "../Hero/Hero";
-import profilePic from "./fetchimage.webp";
-import githubIcon from "./github-brands.svg";
-import emailIcon from "./envelope-solid.svg";
-import instaIcon from "./instagram-brands.svg";
-import feature1Image from "./feature-1-image.svg";
-import feature2Image from "./feature-2-image.svg";
+import profilePic from "../../assets/images/fetchimage.webp";
+import githubIcon from "../../assets/images/github-brands.svg";
+import emailIcon from "../../assets/images/envelope-solid.svg";
+import instaIcon from "../../assets/images/instagram-brands.svg";
+import feature1Image from "../../assets/images/feature-1-image.svg";
+import feature2Image from "../../assets/images/feature-2-image.svg";
+import { useState } from "react";
 import "./HomePage.css";
-import Modal from "../Utility/Modal/Modal";
 
 function HomePage() {
+  const [logInOpen, setLogInOpen] = useState(false);
+  const [signUpOpen, setSignUpOpen] = useState(false);
+
+  const toggleLogInModal = () => {
+    setLogInOpen(!logInOpen);
+  };
+
+  const toggleSignUpModal = () => {
+    console.log("sign up open: ", signUpOpen)
+    setSignUpOpen(!signUpOpen)
+  }
+
   return (
     <div className="home-page-container">
-        <Hero />
+      <Hero logInState={{state: logInOpen, toggle: toggleLogInModal}} signUpState={{state: signUpOpen, toggle: toggleSignUpModal}}/>
       <div className="home-page-content">
         <div className="feature1-container" id="feature">
           <img src={feature1Image} alt="phone notification image" />
@@ -32,7 +43,7 @@ function HomePage() {
               See which days you’ve missed a dose plus your weekly, monthly,
               yearly, and total compliance all in one place
             </span>
-            <button className="get-started-feature"> Get Started </button>
+            <button onClick={toggleSignUpModal} className="get-started-feature"> Get Started </button>
           </div>
         </div>
 

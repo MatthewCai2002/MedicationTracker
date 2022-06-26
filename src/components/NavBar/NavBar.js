@@ -1,25 +1,20 @@
+import "./NavBar.css";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import Modal from "../Utility/Modal/Modal";
-import Button from "../Utility/Button/Button";
-import "./NavBar.css";
 import LogIn from "../LogIn/LogIn";
+import SignUp from "../SignUp/SignUp";
 
-function NavBar(props) {
+function NavBar({logInOpen, signUpOpen, toggleLogInModal, toggleSignUpModal}) {
   const [mobileNav, setMobileNav] = useState(false);
-  const [logInOpen, setLogInOpen] = useState(false);
-
-  const toggleLogInModal = () => {
-    setLogInOpen(!logInOpen);
-  };
-
+  
   const toggleMobileNav = () => {
     setMobileNav(!mobileNav);
   };
 
   return (
     <div className="header-container" id="about">
-      {logInOpen && <LogIn toggleLogInModal={toggleLogInModal}/>}
+      <LogIn className={logInOpen ? "modal-active" : "modal-inactive"}  onClick={toggleLogInModal} toggleLogInModal={toggleLogInModal}  />
+      <SignUp className={signUpOpen ? "modal-active" : "modal-inactive"} onClick={toggleSignUpModal} toggleSignUpModal={toggleSignUpModal}  />
       <a className="logo"> ReMind</a>
       <button
         onClick={toggleMobileNav}
@@ -70,7 +65,7 @@ function NavBar(props) {
         </ul>
         <div id="account-container" className="account-container">
           <a onClick={toggleLogInModal}>Log In</a>
-          <a>Sign Up</a>
+          <a onClick={toggleSignUpModal}>Sign Up</a>
         </div>
       </nav>
     </div>

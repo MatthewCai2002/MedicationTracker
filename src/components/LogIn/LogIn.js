@@ -4,10 +4,11 @@ import facebookIcon from "../../../src/assets/icons/facebook-icon.svg";
 import googleIcon from "../../../src/assets/icons/google-icon.svg";
 import React from "react";
 import "./LogIn.css";
+import Form from "../Utility/Form/Form";
 
-export default function LogIn({ toggleLogInModal }) {
+export default function LogIn({ className, toggleLogInModal }) {
   return (
-    <Modal toggleModal={toggleLogInModal}>
+    <Modal className={className} toggleModal={toggleLogInModal}>
       <div className="log-in-content">
         <h2> Log In </h2>
         <div className="social-log-in">
@@ -21,24 +22,9 @@ export default function LogIn({ toggleLogInModal }) {
           </Button>
         </div>
         <p>or</p>
-        <form className="log-in-form">
-          <div>
-            <label for="email">Email</label>
-            <input type="text" id="email" required/>
-          </div>
-          <div>
-            <div className="password-entry">
-              <label for="password">password</label>
-              <a> Forgot your password?</a>
-            </div>
-            <input type="text" id="password" required/>
-          </div>
-          <input
-            className="base-button submit-btn"
-            type="submit"
-            value="Log In"
-          />
-        </form>
+        <Form>
+          <a> Forgot your password?</a>
+        </Form>
         <div className="modal-footer">
           <p>Don’t Have an Account?</p>
           <a>Sign Up</a>

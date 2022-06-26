@@ -1,11 +1,11 @@
 import NavBar from "../NavBar/NavBar";
-import heroImage from "./Hero-Image.svg";
+import heroImage from "../../assets/images/Hero-Image.svg";
 import "./Hero.css";
 
 function Hero(props) {
   return (
     <div className="hero-container">
-      <NavBar />
+      <NavBar logInOpen={props.logInState.state} signUpOpen={props.signUpState.state} toggleLogInModal={props.logInState.toggle} toggleSignUpModal={props.signUpState.toggle}/>
       <div className="hero-content" id="about">
         <img src={heroImage} alt="Hero Image" />
         <div className="all-hero-text">
@@ -16,7 +16,7 @@ function Hero(props) {
               notifications so you never miss a dosage again.
             </span>
           </div>
-          <button className="get-started-hero"> Get Started </button>
+          <button onClick={props.signUpState.toggle} className="get-started-hero"> Get Started </button>
         </div>
       </div>
     </div>
