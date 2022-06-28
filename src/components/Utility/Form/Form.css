@@ -12,6 +12,20 @@ form > * {
     width: 100%;
 }
 
+.account-link {
+    text-align: center;
+    font-family: var(--ff-main-font);
+    font-weight: var(--ff-font-weight);
+    font-size: var(--ff-font-size);
+    font-style: normal;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.account-link::after {
+    content: none;
+}
+
 input {
     margin-top: 1em;
     padding-block: 0.25em;
