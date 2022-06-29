@@ -1,6 +1,6 @@
 import React from 'react'
-import MedicationItem from '../MedicationItem/MedicationItem'
-import NewMedication from '../addMedication/MedicationForm'
+import MedicationItem from '../MedicationComponents/MedicationItem/MedicationItem'
+import NewMedication from '../MedicationComponents/NewMedication/NewMedication'
 
 export default function AccountPage() {
     const medications = [

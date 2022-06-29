@@ -3,6 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Form(props) {
+  const accountLinkStyle = {
+    textAlign: "center",
+    fontFamily: 'var(--ff-main-font)',
+    fontWeight: 'var(--ff-font-weight)',
+    fontSize: 'var(--ff-font-size)',
+    fontStyle: 'normal',
+    letterSpacing: '1.5px',
+    color: '#fff'
+};
+
   return (
     <form>
       <div>
@@ -16,7 +26,8 @@ export default function Form(props) {
         </div>
         <input type="text" id="password" required />
       </div>
-      <Link to="/account" className="base-button account-link">
+      <Link to="/account" className="base-button account-link"
+      style={accountLinkStyle}>
         Submit
       </Link>
     </form>
