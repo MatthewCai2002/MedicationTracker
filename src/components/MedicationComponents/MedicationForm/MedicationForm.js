@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "../../Utility/Card/Card";
 import "./MedicationForm.css";
 
-function NewMedication() {
+function NewMedication(props) {
 	const [medName, setMedName] = useState("");
 	const [dosage, setDosage] = useState("");
 
@@ -22,7 +22,7 @@ function NewMedication() {
 		};
 		setDosage('')
 		setMedName('')
-		console.log(medData)
+		props.onSave(medData)
 	};
 
 	return (

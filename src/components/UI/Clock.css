@@ -1,0 +1,25 @@
+/* 
+    Components
+*/
+
+.clock-container {
+    /* Layout */
+    text-align: center;
+
+    /* Fonts */
+    /* change font size so that it's responsive */
+    font-size: 2rem; 
+    font-weight: 600;
+    color: white;
+    font-family: var(--default-font);
+}
+
+.clock__date {
+    /* Layout */
+    margin-bottom: 0;
+}
+
+.clock__time {
+    /* Layout */
+    margin-top: 0;
+}

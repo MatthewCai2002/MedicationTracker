@@ -1,0 +1,102 @@
+:root {
+    --default-font: 'Be Vietnam Pro', sans-serif;
+}
+
+/* 
+    Components 
+*/
+.medication-item {
+    /* Layout */
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+
+    /* Properties*/
+    background-color: #1B1B1B;
+
+    /* Fonts */
+    font-family: var(--default-font);
+    font-weight: 400;
+    color: white;
+    text-align: center;
+
+    /* Animations */
+    transition: all ease-in-out 0.2s;
+}
+
+.medication-item:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.medication-info {
+    /* Layout */
+    display: flex;
+}
+
+.medication-last-taken {
+    /* Layout */
+    display: flex;
+    align-items: center;
+}
+
+.medication-date,
+.medication-time,
+.medication-name {
+    /* Fonts */
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.medication-name {
+    /* Layout */
+    margin: 0 2rem;
+}
+
+
+.medication-date {
+    /* Layout */
+    margin-left: 0.25rem;
+}
+
+.medication-time{
+    /* Layout */
+    margin-right: 1.5rem;
+}
+
+.time-at {
+    /* Layout */
+    margin: 0 0.2rem;
+}
+
+/* 
+    Buttons
+*/
+
+.next-dose {
+    /* Layout */
+    margin: 1rem 1rem 1rem 0;
+    padding: 0 1rem;
+
+    /* Background */
+    background-color: blueviolet;
+
+    /* Border */
+    border: none;
+    border-radius: 10px;
+
+    /* Fonts */
+    font-family: inherit;
+    font-weight: 550;
+    font-size: large;
+
+    /* Animation */
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.next-dose:hover {
+    transform: scale(1.04);
+}

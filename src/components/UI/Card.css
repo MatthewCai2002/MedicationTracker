@@ -1,0 +1,10 @@
+.card {
+    /* Layout */
+    
+    width: 80%;
+    padding: 0 1rem;
+
+    /* Properties */
+    background-color: #2B2E43;
+    border-radius: 1rem;
+}

@@ -3,6 +3,14 @@ import MedicationItem from '../MedicationComponents/MedicationItem/MedicationIte
 import NewMedication from '../MedicationComponents/NewMedication/NewMedication'
 
 export default function AccountPage() {
+  const getMedicationDataHandler = (enteredMedicationData) => {
+    const medicationData = {
+      ...enteredMedicationData,
+    }
+    console.log(medicationData)
+
+
+  }
     const medications = [
         { name: "Acutane", date: new Date() },
         { name: "Acutane2", date: new Date() },
@@ -10,7 +18,7 @@ export default function AccountPage() {
 
   return (
     <div>
-      <NewMedication />
+      <NewMedication onSave={getMedicationDataHandler}/>
       <MedicationItem name={medications[0].name} date={medications[0].date} />
       <MedicationItem name={medications[1].name} date={medications[1].date} />
     </div>
