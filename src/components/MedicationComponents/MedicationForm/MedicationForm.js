@@ -17,12 +17,17 @@ function NewMedication(props) {
 	const submitHandler = (event) => {
 		event.preventDefault();
 		const medData = {
+			id:
+				Math.random() *
+					(Number.MAX_SAFE_INTEGER - Number.MIN_SAFE_INTEGER) +
+				Number.MIN_SAFE_INTEGER,
 			name: medName,
 			dosage: dosage,
+			date: new Date(),
 		};
-		setDosage('')
-		setMedName('')
-		props.onSave(medData)
+		setDosage("");
+		setMedName("");
+		props.onSave(medData);
 	};
 
 	return (
